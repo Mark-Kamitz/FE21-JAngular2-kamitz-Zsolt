@@ -1,0 +1,6 @@
+<nav class="nav  navbar-dark bg-dark text-white" style="width:100%">
+    <a class="nav-link" routerLink="">home</a>
+    <a class="nav-link " routerLink="contact">contact</a>
+    <button class="border-0 bg-dark text-primary px-2 py-2" (click)="donateMore()">donate €10! <span class="m-1">{{donation}} € </span></button>
+    <span class="text-danger px-2 py-2" *ngIf="donation > 200">you are "VIP"</span>
+</nav>

@@ -1,0 +1,20 @@
+<form [formGroup]="addCar" (ngSubmit)=" onSubmit()">
+    <span class="span">Brand:</span> <input type="text" formControlName="brand"><br>
+    <span class="span">Type:</span> <input type="text" formControlName="type"><br>
+    <span class="span">Image:</span> <input type="text" formControlName="pic"><br><br>
+    <input type="submit">
+</form>
+
+<div class="container">
+    <div class="row">
+        <div class="col12 col-sm-6 col-md-4" *ngFor="let val of cars">
+            <div class="card mt-4" >
+                <img src="{{val.pic}}" class="card-img-top" >
+                <div class="card-body">
+                <h5 class="card-title">{{val.brand}}</h5>
+                <p class="card-text">Model: {{val.type}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
