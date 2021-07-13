@@ -1,9 +1,29 @@
-<form [formGroup]="addCar" (ngSubmit)=" onSubmit()">
+<!-- <form [formGroup]="addCar" (ngSubmit)="onSubmit()">
     <span class="span">Brand:</span> <input type="text" formControlName="brand"><br>
     <span class="span">Type:</span> <input type="text" formControlName="type"><br>
     <span class="span">Image:</span> <input type="text" formControlName="pic"><br><br>
     <input type="submit">
-</form>
+</form> -->
+<div class="container mt-3 mb-3">
+    <form [formGroup]="addCar" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label class="form-label">Brand</label>
+            <input type="text" class="form-control" formControlName="brand"> 
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Type</label>
+            <input type="text" class="form-control" formControlName="type">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Bild</label>
+            <input type="text" class="form-control" formControlName="pic">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
 
 <div class="container">
     <div class="row">
